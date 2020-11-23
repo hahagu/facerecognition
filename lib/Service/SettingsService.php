@@ -125,6 +125,7 @@ class SettingsService {
 
 	/** System setting to configure external model */
 	const SYSTEM_EXTERNAL_MODEL_URL = 'externalModelUrl';
+	const SYSTEM_EXTERNAL_MODEL_API_KEY = 'externalModelApiKey';
 
 	/**
 	 * SettingsService
@@ -303,6 +304,13 @@ class SettingsService {
 	 */
 	public function getExternalModelUrl(): ?string {
 		return $this->config->getSystemValue(self::SYSTEM_EXTERNAL_MODEL_URL, null);
+	}
+
+	/**
+	 * External model Api Key
+	 */
+	public function getExternalModelApiKey(): ?string {
+		return $this->config->getSystemValue(self::SYSTEM_EXTERNAL_MODEL_API_KEY, null);
 	}
 
 }
